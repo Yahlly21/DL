@@ -39,7 +39,11 @@ Readability Scores using textstat.
 
 12. results.csv: Contains the results from all trained models, including metrics such as accuracy, precision, recall, F1-score, and AUC.
 
-13. Assets Folder 'assets/': Contains necessary files for the Model Selection Dash app.
+13. finetuning_last_2_layers: Trains all the models using the second finetuing tecnique.
+
+14. result_last_2_layers: Contains the results from all trained models using the second  finetuing tecnique.
+
+15. Assets Folder 'assets/': Contains necessary files for the Model Selection Dash app.
 
 **How to Use This Repository** - 
 
