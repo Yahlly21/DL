@@ -1,6 +1,7 @@
-**Email Classification Using NLP Techniques: Identifying Phishing Emails - Group 11**
+**Email Classification Using NLP Techniques: Identifying Phishing Emails - Group 11 - Ron Elias & Yahlly Schein**
 
-This repository contains the code and resources for our project on email classification using Natural Language Processing (NLP) techniques. The project is divided into two main parts: Part A covers the statistical analysis and preprocessing of the data, while Part B involves training models using pre-trained models from Hugging Face, followed by various model shrinking techniques.
+This repository contains the code and resources for our project on email classification using Natural Language Processing (NLP) techniques. 
+The project is divided into two main parts: **Part A** covers the statistical analysis and preprocessing of the data, while **Part B** involves training models using pre-trained models from Hugging Face, followed by various model compressing techniques.
 
 **Repository Structure**
 **Part A: Statistical Analysis and Data Preprocessing**
@@ -23,11 +24,7 @@ Readability Scores using textstat.
 
 4. Model_Selection_Dash_App.ipynb: A Dash app that helps in model selection using a utility function formulated in the project.
 
-5. Pruning_Albert.ipynb: Prunes the Albert model to reduce its size.
-
 6. Pruning_Roberta.ipynb: Prunes the Roberta model.
-
-7. Quantization_Albert.ipynb: Quantizes the Albert model to make it smaller and more efficient.
 
 8. Quantization_Roberta.ipynb: Quantizes the Roberta model.
 
@@ -35,15 +32,17 @@ Readability Scores using textstat.
 
 10. Training_Deberta.ipynb: Trains the Deberta model.
 
-11. Training_Distilbert.ipynb: Trains the Distilbert model.
+11. Training_Roberta.ipynb: Trains the Roberta model.
 
-12. results.csv: Contains the results from all trained models, including metrics such as accuracy, precision, recall, F1-score, and AUC.
+12. Training_Distilbert.ipynb: Trains the Distilbert model.
 
-13. finetuning_last_2_layers: Trains all the models using the second finetuing tecnique.
+13. results.csv: Contains the results from all trained models, including metrics such as accuracy, precision, recall, F1-score, and AUC.
 
-14. result_last_2_layers: Contains the results from all trained models using the second  finetuing tecnique.
+14. finetuning_last_2_layers: Trains all the models using the second finetuing tecnique.
 
-15. Assets Folder 'assets/': Contains necessary files for the Model Selection Dash app.
+15. result_last_2_layers: Contains the results from all trained models using the second  finetuing tecnique.
+
+16. Assets Folder 'assets/': Contains necessary files for the Model Selection Dash app.
 
 **How to Use This Repository** - 
 
@@ -54,18 +53,19 @@ Prerequisites Part B:
 CUDA Toolkit: Ensure you have the CUDA toolkit installed to leverage GPU acceleration.
 cuDNN: Install NVIDIA's cuDNN library for deep learning acceleration.
 PyTorch: Install one of these deep learning frameworks with GPU support
+
 **Setup Instructions**
 
 1. Download the Data: Obtain the dataset from Kaggle.Need to download the phishing_email.csv file from here: https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset/data
 
-2. Run Part A: Execute the A.ipynb notebook to preprocess the data and partition it for model training.
+2. Run Part A: Execute the A.ipynb notebook to preprocess the data and partition it for model training (the train-test split happens in the end of this notebook).
 
 3. Train and Shrink Models:
 
-4. Run the training notebooks in Part B to train base models.
-Apply distillation, pruning, and quantization to shrink the models.
+4. Run the training notebooks in Part B to train base models. Note that there are saperated notebooks for the 2 finetuning techniques.
+Apply distillation, pruning, and quantization to compress the models.
 
-**Model Shrinking Techniques**
+**Model compressing Techniques**
 Distillation: Reduces the size of a large model by training a smaller model (student model) to mimic the behavior of a larger model (teacher model).
 Pruning: Reduces the size of a model by removing weights or neurons that have minimal impact on the model's predictions.
 Quantization: Converts a model's weights from floating-point numbers to lower-bit representations, reducing the model's size and improving inference efficiency.
