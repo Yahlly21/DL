@@ -1,0 +1,38 @@
+PART A – We recommend to look at the notebook for more information and visualizations
+Introduction and Setup
+The analysis begins with the installation of essential libraries including seaborn, wordcloud, plotly, textstat, and nltk. These tools are crucial for data visualization, text analysis, and natural language processing. Following the installation, the notebook imports necessary packages for handling data, performing computations, and generating visualizations.
+Data Loading and Initial Examination
+The dataset, named phishing_email.csv, is loaded into a pandas DataFrame. Initial exploration involves displaying the structure of the dataset and a sample row to understand its contents and format. This step ensures that the dataset includes crucial columns such as text_combined (email content) and label (indicating whether an email is phishing or non-phishing).
+Exploratory Data Analysis
+Label Distribution
+A count plot visualizes the distribution of email labels, providing insights into the balance between phishing and non-phishing emails within the dataset. This plot is essential for understanding the proportion of each category and identifying any potential class imbalance.
+Text Length Analysis
+The notebook computes several text length features:
+* Character Count: Total number of characters in each email.
+* Word Count: Total number of words in each email.
+* Average Word Length: Average length of words within each email.
+Descriptive statistics are provided to summarize the distribution of these features. Additionally, a histogram plots the distribution of text lengths, highlighting a critical threshold for encoding lengths (512 words). This visualization helps in identifying patterns and anomalies in text length.
+Textual Feature Analysis
+Word Clouds
+To gain qualitative insights, word clouds are generated for phishing and non-phishing emails. By visualizing the most frequent words, these clouds reveal distinct lexical patterns. For phishing emails, words like 'money', 'link', and 'click' are prominent, suggesting common phishing tactics. In contrast, non-phishing emails appear more varied and less distinct.
+Linguistic Features
+The notebook computes several linguistic features:
+* Uppercase Count: Number of uppercase letters.
+* Exclamation Count: Number of exclamation marks.
+* Question Count: Number of question marks.
+* Special Character Count: Number of special characters.
+Further analysis examines the proportion of uppercase letters and the presence of special punctuation, noting that some emails may lack these elements, potentially indicating preprocessing of the data.
+Sentiment Analysis
+Using the SentimentIntensityAnalyzer from nltk, the notebook assesses the sentiment of each email, capturing positive, negative, and neutral sentiment scores. This analysis helps in detecting emotional tones that might be indicative of phishing attempts, such as urgent or manipulative language.
+Readability Scores
+Two readability metrics are computed:
+* Flesch-Kincaid Grade Level: Indicates the U.S. school grade level required to understand the text.
+* Flesch Reading Ease: Measures how easy the text is to read, with higher scores representing easier readability.
+These metrics offer insights into the complexity and accessibility of the email texts.
+Tokenization and TF-IDF Analysis
+The notebook tokenizes the email texts and removes stopwords to prepare for further analysis. It also calculates TF-IDF features for a subset of 100 words due to the computational intensity of processing the entire vocabulary.
+Spam-Related Words
+A feature engineering step involves identifying and counting occurrences of common spam-related words (e.g., 'free', 'win', 'urgent'). The correlation of these counts with the label is analyzed, revealing which spam-related words are more closely associated with phishing emails.
+Conclusion
+This comprehensive analysis of the phishing email dataset provides valuable insights into various textual and linguistic features, aiding in the understanding and identification of phishing attempts. By leveraging diverse analytical techniques, including text length analysis, word clouds, sentiment scoring, and feature engineering, the notebook highlights key characteristics that differentiate phishing emails from non-phishing ones.
+
