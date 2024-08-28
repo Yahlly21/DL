@@ -1,0 +1,2 @@
+# This is an empty folder that deomstraints the structure of the repo.
+# Download the data from the given link and put it here
