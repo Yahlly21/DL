@@ -2,7 +2,7 @@
 
 This repository contains the code and resources for our project on email classification using Natural Language Processing (NLP) techniques. 
 The project is divided into two main parts: **Part A** covers the statistical analysis and preprocessing of the data, while **Part B** involves training models using pre-trained models from Hugging Face, followed by various model compressing techniques.
-A detailed PDF document summarizing the project, including problem introduction, methodologies, model selection framework and results, is available in the repository for reference.
+**A detailed PDF** document summarizing the project, including problem introduction, methodologies, model selection framework and results, is available in the repository for reference.
 
 **Repository Structure**
 **Part A: Statistical Analysis and Data Preprocessing**
